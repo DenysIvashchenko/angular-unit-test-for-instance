@@ -8,7 +8,7 @@ describe('TestingService version 3', () => {
   let service: TestingService;
   let firstService: FirstService;
 
-  const fakeFirstService = jasmine.createSpyObj(['returnValue','initValue'])
+  const fakeFirstService = jasmine.createSpyObj('firstService',['returnValue','initValue','alertSomeText'])
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -20,6 +20,7 @@ describe('TestingService version 3', () => {
     service = TestBed.inject(TestingService);
     firstService = TestBed.inject(FirstService);
     fakeFirstService.returnValue.and.returnValue('one');
+    fakeFirstService.alertSomeText.calls.reset();
   });
 
   it('should return value dy index method 3', () => {
@@ -32,4 +33,10 @@ describe('TestingService version 3', () => {
     const result = service.getValue(0);
     expect(result).toBe('one');
   });
+
+  it('should call method callAlert', () => {
+    spyOn(service, 'callAlert').and.callThrough();
+    service.callAlert('some text');
+    expect(service.callAlert).toHaveBeenCalledWith('some text');
+  })
 });

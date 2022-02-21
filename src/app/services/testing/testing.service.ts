@@ -8,6 +8,7 @@ export class TestingService {
 
   constructor(private firstService: FirstService) { 
     this.firstService.initValue();
+    this.firstService.alertSomeText('some text');
   }
 
   getValue(index: number): string {
@@ -18,7 +19,7 @@ export class TestingService {
     return 2;
   }
 
-  callAlert(): void {
-    this.firstService.alertSomeText();
+  callAlert(message: string): void {
+    this.firstService.alertSomeText(message);
   }
 }

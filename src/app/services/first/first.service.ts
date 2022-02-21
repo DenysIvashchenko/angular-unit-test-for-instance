@@ -22,7 +22,7 @@ export class FirstService {
     this._defaultValue = 'one';
   }
 
-  public alertSomeText(): void {
-    alert('some text');
+  public alertSomeText(message: string): void {
+    alert('some text'+ message);
   }
 }
