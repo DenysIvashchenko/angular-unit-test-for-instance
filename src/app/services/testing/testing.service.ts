@@ -6,7 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class TestingService {
 
-  constructor(private firstService: FirstService) { }
+  constructor(private firstService: FirstService) { 
+    this.firstService.initValue();
+  }
 
   getValue(index: number): string {
     return this.firstService.returnValue(index);
@@ -14,5 +16,9 @@ export class TestingService {
 
   getIndex(): number {
     return 2;
+  }
+
+  callAlert(): void {
+    this.firstService.alertSomeText();
   }
 }

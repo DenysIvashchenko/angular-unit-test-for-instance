@@ -21,4 +21,8 @@ export class FirstService {
   public initValue(): void {
     this._defaultValue = 'one';
   }
+
+  public alertSomeText(): void {
+    alert('some text');
+  }
 }
