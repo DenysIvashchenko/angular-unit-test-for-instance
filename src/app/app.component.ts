@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'unit-test';
+  public title: string = 'unit-test';
+
+  public arr: number[] = [1,2,3,4,5];
+
+  modifyArr(): void {
+    this.arr = [...this.arr, 7]
+  }
 }
