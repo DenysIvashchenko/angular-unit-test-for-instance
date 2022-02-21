@@ -29,6 +29,11 @@ describe('SimpleService', () => {
   it('should return undefined if an argument is missing', () => {
     const sum = service.sum(2);
     expect(sum).toBeUndefined();
-  })
+  });
+
+  it('should return 22 if first argument is missing', () => {
+    const sum = service.sum(undefined, 3);
+    expect(sum).toBe(22);
+  });
 
 });
