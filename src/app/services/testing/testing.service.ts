@@ -21,4 +21,8 @@ export class TestingService {
   public setName(v: string) {
     this.first.name = v;
   }
+
+  public returnAge(): number {
+    return this.first.age;
+  }
 }

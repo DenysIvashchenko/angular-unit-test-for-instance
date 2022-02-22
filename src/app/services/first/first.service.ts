@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class FirstService {
 
   private nameValue!: string;
+  public age!: number;
 
   public get name (): string {
     return this.nameValue;
@@ -17,5 +18,14 @@ export class FirstService {
   
   constructor() {
     this.nameValue = 'Mike';
+    this.age = 5;
    }
+
+  public doSomeThing(): void {
+    console.log('do some thing');
+  } 
+
+  public doSomeThingElse(): void {
+    console.log('do some thing else');
+  } 
 }

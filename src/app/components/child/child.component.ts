@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   styleUrls: ['./child.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ChildComponent implements OnInit {
+export class ChildComponent {
   private _item!: number;
 
   @Input() set item(val: number) {
@@ -16,11 +16,6 @@ export class ChildComponent implements OnInit {
 
   get item(): number {
     return this._item;
-  }
-
-  constructor() { }
-
-  ngOnInit(): void {
   }
 
 }
