@@ -5,5 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class SecondService {
 
-  constructor() { }
+  public start(): void {
+    console.log(' it is real second dependency service');
+  }
 }

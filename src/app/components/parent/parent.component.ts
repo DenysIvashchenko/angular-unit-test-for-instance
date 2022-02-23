@@ -8,10 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ParentComponent implements OnInit, DoCheck, OnChanges {
-
-  // private arr: number[] = [];
-
-  @Input() title = 'some title';
+ 
+  @Input() title: string = 'some title';
 
   @Input() arr: number[] = [];
 

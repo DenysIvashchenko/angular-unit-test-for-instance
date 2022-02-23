@@ -1,5 +1,5 @@
+import { CheckValueService } from './../check/check-value.service';
 import { Injectable } from '@angular/core';
-import { CheckValueService } from './check-value.service';
 
 @Injectable({
   providedIn: 'root'

@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { CheckValueService } from './check-value.service';
+import { CheckValueService } from '../check/check-value.service';
 
 import { SimpleService } from './simple.service';
 
